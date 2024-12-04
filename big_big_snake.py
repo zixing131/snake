@@ -1,9 +1,12 @@
+#encoding=u8
 #导入库函数
 #添加了空格暂停开始
 #添加了超级食物,吃了5个食物后会有三分之2的可能生成一个超级食物,超级食物吃了可能加分或减分,但是加分可能性高些,超级食物不吃的话5秒后消失
 #添加了长按按钮增加蛇的速度
-
-from tkinter import * 
+try:
+    from Tkinter import * 
+except:
+    from tkinter import * 
 import random
 #从Frame派生一个snake类,这是所有widget的父容器
 class snake(Frame):
