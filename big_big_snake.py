@@ -69,7 +69,9 @@ class snake(Frame):
             if self.stopid==-1:
                 self.stopid=self.canvas.create_text(self.size/2,self.size/2-20,
                 text = '暂停中,点击空格继续...'      
-                ,fill = '#238C23',font=font.Font(size=22))
+                ,fill = '#238C23'
+                #,font=font.Font(size=22)
+                )
             self.after(self.speed, self.drawsnake)
             return
         else:
@@ -172,8 +174,8 @@ class snake(Frame):
             self.after(self.speed, self.drawsnake)
             self.canvas.create_text(self.size/2,self.size/2-20,       # 使用create_text方法绘制文字  
             text = '最终得分: '+str(self.score)      # 所绘制文字的内容  
-            ,fill = 'black'                          # 所绘制文字的颜色为灰色
-            ,font=font.Font(size=34))                # 设置字体大小
+            ,fill = 'black'  ,    )                    # 所绘制文字的颜色为灰色
+            #font=font.Font(size=34))                # 设置字体大小
             self.after(230, self.die)
     def keyrelease(self, event): #按键响应
         self.pressnum=0
